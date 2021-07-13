@@ -1,0 +1,15 @@
+mat-toolbar {
+  background-color: #427cac;
+  color: white;
+  height: 50px;
+}
+
+mat-toolbar-row {
+  display: flex;
+  div {
+      flex-grow: 1;
+  }
+}
+span{
+  padding-top: 1%;
+}

@@ -1,0 +1,41 @@
+<app-top-bar></app-top-bar>
+<fd-card>
+  <fd-card-header>
+      <h2 fd-card-title>Choose Academies</h2>
+  </fd-card-header>
+  <fd-card-content>
+
+    <fd-grid-list selectionMode="multiSelect" (selectionChange)="onSelectionChange($event)">
+
+  <fd-grid-list-item
+      *ngFor="let item of list"
+      [type]="item.type"
+      [counter]="item.counter"
+      [value]="item.id"
+      [selected]="item.selected"
+      (press)="press($event)"
+      (detail)="detail($event)"
+      (navigate)="navigate($event)"
+  >
+      <fd-grid-list-item-toolbar><h3 fd-title [innerText]="item.title"></h3></fd-grid-list-item-toolbar>
+
+      <div class="fd-grid-list-item-body--container">
+          <fd-avatar [image]="item.image" size="xl"></fd-avatar>
+          <div class="fd-grid-list-item-body--content">
+              <h6 fd-title [innerText]="item.title"></h6>
+              <p [innerText]="item.description"></p>
+              <div class="fd-grid-list-item-body--content-address">
+                 <!-- <p>781 Main Street</p>
+                  <p>Anytown, SD 57401</p>
+                  <p>USA</p>-->
+              </div>
+              <a href="{{item.wrkbk}}"> Sample Workbook</a>
+          </div>
+      </div>
+  </fd-grid-list-item>
+</fd-grid-list>
+<br>
+<div style= "text-align: right; margin-right: 5%; padding-bottom: 10px;"><a routerLink="/customer-info"><button fd-button label="Next"></button></a></div>
+
+</fd-card-content>
+</fd-card>

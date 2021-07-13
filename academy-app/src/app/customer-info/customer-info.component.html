@@ -1,0 +1,40 @@
+<app-top-bar></app-top-bar>
+
+<fd-card>
+  <fd-card-header>
+      <h2 fd-card-title>Customer Information</h2>
+  </fd-card-header>
+  <fd-card-content>
+
+<br>
+<div fd-form-item>
+    <label fd-form-label for="input-1">Customer Name</label>
+    <input fd-form-control type="text" id="input-1" placeholder="Field placeholder text" />
+</div>
+<div fd-form-item>
+  <label fd-form-label for="input-1">Workshop</label>
+    <input fd-form-control type="text" id="input-2" placeholder="Field placeholder text" aria-required="true" />
+</div>
+<div fd-form-item>
+    <label fd-form-label for="input-3">Region</label>
+    <input fd-form-control type="text" id="input-3" placeholder="Field placeholder text" aria-required="true" />
+</div>
+<div fd-form-item>
+  <label fd-form-label for="File Upload">File Upload</label>
+  <div><app-file-uploader></app-file-uploader></div>
+</div>
+
+<br>
+
+
+<fd-layout-grid>
+  <div fdLayoutGridCol="5" style= "text-align: left; margin-left: 5%; padding-bottom: 10px;">
+    <a routerLink="/academy-list"><button fd-button label="Back"></button></a>
+  </div>
+
+  <div fdLayoutGridCol="5" style= "text-align: right; margin-right: 5%; padding-bottom: 10px;">
+    <button fd-button label="Save"></button>
+  </div>
+</fd-layout-grid>
+</fd-card-content>
+</fd-card>
